@@ -1,0 +1,150 @@
+.component {
+    width: 100%;
+}
+
+.top_bar {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--uni_3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_bar_container {
+    width: 100%;
+    max-width: 1280px;
+    text-align: center;
+}
+
+.top_bar_container p {
+    font-size: 14px;
+    color: var(--text_2);
+}
+
+.bottom_bar {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--background_1);
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom_bar_container {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav_group a {
+    display: flex;
+}
+
+.brand {
+    max-width: 130px;
+    display: flex;
+}
+
+.brand img {
+    width: 100%
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navigation a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text_1);
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.burger {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.mob_menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--background_1);
+    transition: .2s ease;
+    display: none;
+    z-index: 99;
+}
+
+.mob_menu_header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.mob_menu_header_group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mob_menu_header_group button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+}
+
+.mob_menu_header a {
+    max-width: 120px;
+    display: flex;
+}
+
+.mob_menu_header a img {
+    width: 100%;
+}
+
+.mob_navigation {
+    margin: 20px 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mob_navigation a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text_2);
+    text-decoration: none;
+}
+@media(max-width: 890px) {
+    .navigation {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .mob_menu {
+        display: block;
+    }
+}

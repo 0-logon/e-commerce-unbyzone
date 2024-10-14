@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: "Michroma", sans-serif; */
+/* font-family: "Montserrat", sans-serif; */
+
+:root {
+  --uni_1: #87A2FF;
+  --uni_2: #9aaffa;
+  --uni_3: #D2E0FB;
+
+  --text_1: #232323;
+  --text_2: #333333;
+  --text_3: #4a4a4a;
+
+  --background_1: #fafafa;
+  --background_2: #f8f8f8;
+
+  --button_1: #87A2FF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}

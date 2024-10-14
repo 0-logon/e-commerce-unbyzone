@@ -1,0 +1,34 @@
+.filter_area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter {
+    width: 100%;
+    max-width: 220px;
+    padding: 5px 14px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter input {
+    width: 100%;
+    font-size: 14px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.filter input::placeholder {
+    color: var(--text_1);
+}
+
+@media(max-width: 890px) {
+    .filter_area {
+        display: none;
+    }
+}
