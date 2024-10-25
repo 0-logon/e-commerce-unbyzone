@@ -7,6 +7,10 @@ import { GET_CATEGORIES, GET_PRODUCTS } from "@/graphql/queries";
 import { client } from '@/graphql';
 import DataContext from "@/global/context/DataContext";
 import { fetchData } from "@/utils/fetchData";
+import BestSelling from "@/components/home/BestSelling";
+import Discounts from "@/components/home/Discounts";
+import RecentProducts from "@/components/home/RecentProducts";
+import ProductBanner from "@/components/shared/reusable/ProductBanner";
 
 export default function Home({ categoriesData, productsData }) {
   const { setContextData, products } = useContext(DataContext);
@@ -21,7 +25,7 @@ export default function Home({ categoriesData, productsData }) {
     };
 
     fetchData();
-  }, []);
+  }, [categoriesData, productsData]);
 
   console.log("omg", products);
 
@@ -39,6 +43,10 @@ export default function Home({ categoriesData, productsData }) {
       <main>
         <Hero />
         <Categories />
+        <BestSelling />
+        <Discounts />
+        <RecentProducts />
+        <ProductBanner />
       </main>
     </>
   );

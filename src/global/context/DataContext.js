@@ -1,34 +1,51 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useMemo, useReducer } from "react";
 
 const DataContext = createContext();
 
-function DataProvider({ children }) {
-    const [categories, setCategories] = useState([]);
-    const [products, setProducts] = useState([]);
+const initialState = {
+    categories: [],
+    products: []
+};
 
+const dataReducer = (state, action) => {
+    switch (action.type) {
+        case "SET_CATEGORIES":
+            return { ...state, categories: action.payload };
+        case "SET_PRODUCTS":
+            return { ...state, products: action.payload };
+        case "RESET_DATA":
+            return initialState;
+        default:
+            return state;
+    }
+};
+
+function DataProvider({ children }) {
+    const [state, dispatch] = useReducer(dataReducer, initialState);
 
     const setContextData = ({ categories, products }) => {
-        setCategories(categories ? categories : []);
-        setProducts(products ? products : []);
-    }
+        dispatch({ type: "SET_CATEGORIES", payload: categories.categories || [] });
+        dispatch({ type: "SET_PRODUCTS", payload: products.products || [] });
+    };
 
-    // useEffect(() => {
-    //     const featured = Object.values(metadata).filter(post => post.featured);
-    //     setFeaturedMetadata(featured);
-    // }, [metadata]);
+    // Filter best-selling products from the state
+    const bestSellingProducts = useMemo(() => {
+        return state.products.filter(product => product.bestSelling);
+    }, [state.products]);
 
     const valueToShare = {
-        categories,
-        products,
-        setContextData
-    }
+        setContextData,
+        categories: state.categories,
+        products: state.products,
+        bestSellingProducts
+    };
 
     return (
         <DataContext.Provider value={valueToShare}>
             {children}
         </DataContext.Provider>
-    )
+    );
 }
 
-export { DataProvider }
+export { DataProvider };
 export default DataContext;

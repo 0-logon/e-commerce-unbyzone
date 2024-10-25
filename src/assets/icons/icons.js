@@ -13,16 +13,16 @@ export const UserIcon = () => (
     </svg>
 );
 
-export const CartIcon = () => (
+export const CartIcon = ({color, size}) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="21"
-        height="21"
+        width={size ? size : 21}
+        height={size ? size : 21}
         fill="none"
         viewBox="0 0 21 21"
     >
         <path
-            fill="#232323"
+            fill={color ? color : "#232323"}
             d="M2.005 14V2h-2V0h3a1 1 0 011 1v12h12.438l2-8H6.005V3h13.72a1 1 0 01.97 1.243l-2.5 10a1 1 0 01-.97.757H3.004a1 1 0 01-1-1zm2 7a2 2 0 110-4 2 2 0 010 4zm12 0a2 2 0 110-4 2 2 0 010 4z"
         ></path>
     </svg>
@@ -73,7 +73,7 @@ export const BurgerIcon = () => (
     </svg>
 );
 
-export const ArrowRightIcon = () => (
+export const ArrowRightIcon = ({ color }) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -82,7 +82,7 @@ export const ArrowRightIcon = () => (
         viewBox="0 0 16 16"
     >
         <path
-            fill="#FAFAFA"
+            fill={color ? color : '#FAFAFA'}
             d="M12.172 7L6.808 1.636 8.222.222 16 8l-7.778 7.778-1.414-1.414L12.172 9H0V7h12.172z"
         ></path>
     </svg>

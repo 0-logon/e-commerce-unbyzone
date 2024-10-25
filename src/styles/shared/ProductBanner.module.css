@@ -1,0 +1,88 @@
+.section {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: var(--background_2);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 820px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    background-image: url('../../assets/backgrounds/product_banner_bg.png');
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h3 {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    font-size: 600;
+    color: #62b984;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    color: #3d694e;
+}
+
+.discount_badge {
+    position: absolute;
+    left: 80px;
+    top: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text_2);
+    width: 60px;
+    height: 60px;
+    background-color: #ffffffc5;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    position: absolute;
+    left: 20px;
+    top: -30px;
+    max-width: 100px;
+    animation: animation 3s infinite;
+}
+
+@keyframes animation {
+    0% {
+        top: -30px;
+    }
+
+    50% {
+        top: -10px;
+    }
+
+    100% {
+        top: -30px;
+    }
+}
+
+@media(max-width: 700px) {
+    .discount_badge {
+        top: 10px;
+    }
+}

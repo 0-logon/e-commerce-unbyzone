@@ -9,7 +9,39 @@
 .container {
     width: 100%;
     max-width: 1280px;
-    background-color: green;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+}
+
+.container a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--text_2);
+}
+
+.container a i {
+    font-size: 4rem;
+}
+
+.container i::before {
+    transition: transform 0.3s ease, filter 0.1s ease;
+}
+
+.container a:hover i::before {
+    transform: translateY(-10px) scale(1.1);
+    filter:  drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.container a p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+@media(max-width: 720px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
