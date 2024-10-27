@@ -1,0 +1,49 @@
+.section {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: var(--background_2);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.header h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--text_1);
+}
+
+.arrows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.arrows button:active {
+    transform: scale(0.8);
+}

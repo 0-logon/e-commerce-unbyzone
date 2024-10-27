@@ -22,7 +22,7 @@
 }
 
 .handler_indicator p {
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 500;
     color: #FFFFFF;
 }
@@ -58,7 +58,7 @@
 }
 
 .modal_header p {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--text_1);
 }

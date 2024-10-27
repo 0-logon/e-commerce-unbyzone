@@ -11,6 +11,7 @@ import BestSelling from "@/components/home/BestSelling";
 import Discounts from "@/components/home/Discounts";
 import RecentProducts from "@/components/home/RecentProducts";
 import ProductBanner from "@/components/shared/reusable/ProductBanner";
+import HappyCustomers from "@/components/home/HappyCustomers";
 
 export default function Home({ categoriesData, productsData }) {
   const { setContextData, products } = useContext(DataContext);
@@ -47,6 +48,7 @@ export default function Home({ categoriesData, productsData }) {
         <Discounts />
         <RecentProducts />
         <ProductBanner />
+        <HappyCustomers />
       </main>
     </>
   );
