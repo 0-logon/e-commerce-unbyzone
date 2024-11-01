@@ -47,3 +47,13 @@
     font-size: 1.4rem;
     color: var(--text_2);
 }
+
+@media(max-width: 380px) {
+    .swiper {
+        display: block;
+    }
+    .avatar {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+}

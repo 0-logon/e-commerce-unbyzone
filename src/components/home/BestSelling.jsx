@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styles from '@/styles/home/BestSelling.module.css';
 import Link from 'next/link';
 import { ArrowRightIcon } from '@/assets/icons/icons';
-import DataContext from '@/global/context/DataContext';
+import DataContext from '@/store/context/DataContext';
 import ProductCard from '../shared/reusable/ProductCard';
 
 const BestSelling = () => {

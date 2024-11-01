@@ -4,7 +4,8 @@ import Link from 'next/link';
 import Logo from '@/assets/logos/logo.png';
 import { BurgerIcon, CloseIcon, UserIcon } from '@/assets/icons/icons';
 import NavbarFilter from './NavbarFilter';
-import Cart from './Cart';
+import dynamic from 'next/dynamic';
+const Cart = dynamic(() => import('./Cart'), { ssr: false })
 
 const Navbar = () => {
     const [mob, setMob] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styles from '@/styles/home/Categories.module.css';
-import DataContext from '@/global/context/DataContext';
+import DataContext from '@/store/context/DataContext';
 import Link from 'next/link';
 
 const Categories = () => {

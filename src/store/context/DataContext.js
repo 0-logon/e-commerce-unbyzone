@@ -23,7 +23,7 @@ const dataReducer = (state, action) => {
 function DataProvider({ children }) {
     const [state, dispatch] = useReducer(dataReducer, initialState);
 
-    const setContextData = ({ categories, products }) => {
+    const setContextData = ({ categories={}, products={} }) => {
         dispatch({ type: "SET_CATEGORIES", payload: categories.categories || [] });
         dispatch({ type: "SET_PRODUCTS", payload: products.products || [] });
     };
