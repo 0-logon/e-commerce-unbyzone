@@ -61,10 +61,9 @@ export const GET_SINGLE_PRODUCT = gql`
 `;
 
 export const GET_CART_PRODUCT = gql`
-  query GetProductById($id: ID!) {
-    product(where: { id: $id }) {
+  query GetCartProducts($ids: [ID!]!) {
+    products(where: { id_in: $ids }) {
       id
-      slug
       title
       price
       photo {
