@@ -4,9 +4,14 @@
   ],
   "overrides": [
     {
-      "files": ["*.js", "*.jsx", "*.mjs"], // Update this pattern to match your JavaScript files
+      "files": [
+        "*.js",
+        "*.jsx",
+        "*.mjs"
+      ], // Update this pattern to match your JavaScript files
       "rules": {
-        "@next/next/no-img-element": "off"
+        "@next/next/no-img-element": "off",
+        "react/no-unescaped-entities": "off"
       }
     }
   ]
