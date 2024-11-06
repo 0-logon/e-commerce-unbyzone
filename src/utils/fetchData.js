@@ -1,6 +1,5 @@
 import { client } from '@/graphql';
-import { GET_CART_PRODUCT, GET_CATEGORIES, GET_PRODUCTS, GET_SINGLE_PRODUCT, GET_SLUGS } from '@/graphql/queries';
-import { useQuery } from '@apollo/client';
+import { GET_CATEGORIES, GET_PRODUCTS, GET_SINGLE_PRODUCT, GET_SLUGS } from '@/graphql/queries';
 
 export const fetchData = async () => {
   const categoriesData = await client.query({ query: GET_CATEGORIES });

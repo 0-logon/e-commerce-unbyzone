@@ -118,7 +118,7 @@ const Cart = () => {
                                 Total ({totalQuantity} {cartProductsData.length === 1 ? "item" : "items"}): {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(totalPrice)}
                             </p>
                         </div>
-                        {totalQuantity > 0 ? <Link href="/">Checkout</Link> : <Link href="/">Start shopping</Link>}
+                        {totalQuantity > 0 ? <Link href="/checkout">Checkout</Link> : <Link href="/">Start shopping</Link>}
                     </div>
                 </div>
             </div>}

@@ -4,6 +4,7 @@ import DataContext from '@/store/context/DataContext';
 import Link from 'next/link';
 import { ArrowRightIcon } from '@/assets/icons/icons';
 import ProductCard from '../shared/reusable/ProductCard';
+import { getLatestItems } from '@/utils/helpers';
 
 const RecentProducts = () => {
     const { products } = useContext(DataContext);
@@ -16,7 +17,7 @@ const RecentProducts = () => {
                 </div>
                 <div className={styles.products}>
                     {
-                        products.slice(0, 4).map((product) => (
+                        getLatestItems(products, 'publishedAt', 4).map((product) => (
                             <ProductCard key={product.id} data={product} />
                         ))
                     }
