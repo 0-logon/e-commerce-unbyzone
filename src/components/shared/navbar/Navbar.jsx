@@ -47,9 +47,9 @@ const Navbar = () => {
                         <Link href="/">
                             <img src={Logo.src} alt="Unbyzone" />
                         </Link>
-                        <div className={styles.mob_menu_header_group}>
-                            <Link href="/login"><UserIcon /></Link>
-                            <Cart />
+                        <div className={styles.mob_menu_header_group} >
+                            <Link href="/login" onClick={handleMob}><UserIcon /></Link>
+                            <Cart closeMob={() => setMob(false)} />
                             <button onClick={handleMob}><CloseIcon /></button>
                         </div>
 

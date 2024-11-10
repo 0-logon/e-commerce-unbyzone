@@ -8,7 +8,7 @@ import { GET_CART_PRODUCT } from '@/graphql/queries';
 import { removeItem } from '@/store/slices/cartSlice';
 import Link from 'next/link';
 
-const Cart = () => {
+const Cart = ({closeMob}) => {
     const [modal, setModal] = useState(false);
     const modalRef = useRef(null);
     const dispatch = useDispatch();
@@ -75,7 +75,7 @@ const Cart = () => {
     return (
         <div className={styles.component}>
             <div className={styles.handler}>
-                <button onClick={() => handleModal()} className={styles.toggle}>
+                <button onClick={() => {handleModal(); closeMob && closeMob();}} className={styles.toggle}>
                     {totalQuantity > 0 && <div className={styles.handler_indicator}>
                         <p>{totalQuantity}</p>
                     </div>}

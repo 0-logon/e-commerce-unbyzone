@@ -80,3 +80,33 @@ query {
   }
 }
 `
+
+export const GET_PRODUCTS_BY_SEARCH = gql`
+  query GetProductsBySearch($searchKey: String!) {
+    products(where: { 
+      OR: [
+        { title_contains: $searchKey },
+        { description_contains: $searchKey }
+      ]
+    }) {
+      id
+      slug
+      title
+      price
+      description
+      brand {
+        name
+      }
+      category {
+        name
+        slug
+      }
+      bestSelling
+      featuredProduct
+      publishedAt
+      photo {
+        url
+      }
+    }
+  }
+`;

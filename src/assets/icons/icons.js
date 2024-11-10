@@ -219,3 +219,18 @@ export const DeleteBinIcon = () => (
         ></path>
     </svg>
 );
+
+export const HistoryIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        fill="none"
+        viewBox="0 0 20 20"
+    >
+        <path
+            fill="#000"
+            d="M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10h2a8 8 0 1 0 1.385-4.5H6v2H0v-6h2V4a9.99 9.99 0 0 1 8-4m1 5v4.585l3.243 3.243-1.415 1.415L9 10.413V5z"
+        ></path>
+    </svg>
+)

@@ -27,6 +27,42 @@
     color: var(--text_1);
 }
 
+.filter button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.autosuggestions {
+    position: absolute;
+    top: 32px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background_1);
+    gap: 5px;
+    z-index: 1;
+}
+
+.autosuggestions button {
+    font-size: 1.3rem;
+    color: var(--text_1);
+    display: flex;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.autosuggestions button svg {
+    width: 1.2rem;
+    margin-right: 4px;
+}
+
 @media(max-width: 890px) {
     .filter_area {
         display: none;
