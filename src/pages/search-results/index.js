@@ -9,32 +9,36 @@ import ServicesTrack from '@/components/shared/reusable/ServicesTrack';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 
-const index = () => {
+const SearchResultsPage = () => {
     const router = useRouter();
     const { searchKey } = router.query;
 
-    if (searchKey) {
-        return (
-            <>
-                <header>
-                    <Navbar />
-                </header>
-                <main>
-                    <SearchResults searchKey={searchKey} />
-                    <Discounts />
-                    <BestSelling />
-                    <ProductBanner />
-                    <HappyCustomers />
-                    <ServicesTrack />
-                </main>
-                <Footer />
-            </>
-        )
-    } else {
-        useEffect(() => {
+    useEffect(() => {
+        if (!searchKey) {
             router.push('/');
-        }, [router]);
+        }
+    }, [searchKey, router]);
+
+    if (!searchKey) {
+        return null; // Render nothing if searchKey is not available
     }
+
+    return (
+        <>
+            <header>
+                <Navbar />
+            </header>
+            <main>
+                <SearchResults searchKey={searchKey} />
+                <Discounts />
+                <BestSelling />
+                <ProductBanner />
+                <HappyCustomers />
+                <ServicesTrack />
+            </main>
+            <Footer />
+        </>
+    );
 }
 
-export default index;
+export default SearchResultsPage;
